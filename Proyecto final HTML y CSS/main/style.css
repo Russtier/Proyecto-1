@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  height: 100svh;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+
+main {
+  width: 100%;
+}
+
+#hero {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+#hero > article {
+  position: relative;
+}
+#hero > article > img {
+  border-radius: 15px;
+  max-width: 100%;
+  max-height: 100%;
+}
+#boton1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+#boton2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+#oportunidades {
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+.ofertas {
+  max-width: 250px;
+}
+.ofertas > img {
+  width: 200px;
+  border-radius: 15px;
+}
+.ofertas > p {
+  padding: 5px;
+}
+
+#servicios {
+  gap: 50px;
+  width: 100%;
+  padding-bottom: 5rem;
+  flex-wrap: wrap;
+}
+.services {
+  gap: 50px;
+}
+.services > img {
+  width: 100px;
+}
+
+.top {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(212, 212, 212);
+}
+.top > div:first-child {
+  padding-bottom: 20px;
+}
+.top > div > button {
+  padding: 5px;
+}
+.catalogo {
+  gap: 20px;
+}
+.pcs {
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+  gap: 1rem;
+}
+.pcs > ul {
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.asus {
+  width: 200px;
+  border-radius: 15px;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 220px;
+}
+
+#top2 {
+  width: 100%;
+}
+#top2 > div {
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 390px) {
+  .top {
+    display: block;
+  }
+  .catalogo {
+    flex-direction: column;
+  }
+  .pcs > ul {
+    display: none;
+  }
+}

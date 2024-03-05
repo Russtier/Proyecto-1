@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--pc-color-100);
+}
+:root {
+  /* COLORS */
+  --pc-color-000: #ffffff;
+  --pc-color-100: #333333;
+  --pc-color-200: #bf0019;
+  --pc-color-300: #118000;
+  --pc-color-button: #ff6000;
+  --pc-color-button-hover: #cc4d00;
+  /* BACKGROUND COLORS */
+  --pc-background-000: #f2f2f2;
+  --pc-background-100: #cccccc;
+  /* SPACINGS */
+  --pc-gap-s: 5px;
+  --pc-gap-m: 10px;
+  --pc-gap-l: 20px;
+  --pc-margin-s: 5px;
+  --pc-margin-m: 10px;
+  --pc-margin-l: 20px;
+  --pc-margin-xl: 30px;
+  --pc-padding-s: 5px;
+  --pc-padding-m: 10px;
+  --pc-padding-l: 20px;
+  --pc-padding-xl: 30px;
+}
+
+body {
+  height: 100svh;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  justify-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/*! HEADER */
+
+header {
+  background-color: var(--pc-color-000);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: var(--pc-padding-l);
+  z-index: 400;
+}
+#topheader {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: fit-content;
+  padding: var(--pc-padding-m);
+  border-bottom: 1px solid var(--pc-background-100);
+}
+
+#pc {
+  margin: -5px;
+  padding-left: 1rem;
+}
+#pc > img {
+  width: 138px;
+}
+header > div {
+  height: 50px;
+  justify-content: center;
+}
+.search {
+  flex-wrap: nowrap;
+}
+.search-input {
+  position: relative;
+}
+.search-input > input {
+  height: 2.4rem;
+  padding: 0px 13px;
+}
+.search-input > img {
+  position: absolute;
+  right: var(--pc-margin-m);
+  top: var(--pc-margin-m);
+  height: 20px;
+  transition: all 0.5s;
+}
+.search-input > img:hover {
+  transform: scale(1.2);
+}
+.search > button {
+  height: 2.4rem;
+  padding: 0px 30px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  border: 1px solid var(--pc-color-100);
+  background-color: var(--pc-color-000);
+}
+
+#topheader > ul {
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+.icons {
+  height: 1.5rem;
+}
+
+#bottomheader {
+  padding: 10px;
+  height: 2.5rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--pc-background-100);
+}
+#bottomheader > ul > li:last-child > a {
+  color: orange;
+  font-weight: 700;
+}
+#bottomheader > button {
+  background-color: var(--pc-color-000);
+  border: none;
+}
+#bottomheader > button:hover {
+  background-color: var(--pc-background-000);
+}
+#bottomheader > button > div {
+  gap: var(--pc-gap-s);
+}
+#bottomheader > button > div > img {
+  height: 13px;
+}
+#bottomheader > ul {
+  justify-content: end;
+  gap: var(--pc-gap-m);
+}
+#bottomheader > ul > li > a:hover {
+  background-color: var(--pc-background-000);
+}
+
+/* ! MAIN */
+
+main {
+  width: 100%;
+  margin-top: 7rem;
+}
+
+#hero {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+h3 {
+  position: relative;
+}
+#hero > h3 > strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+#hero > h3 > span {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--pc-color-100);
+}
+#hero > article {
+  position: relative;
+}
+#hero > article > img {
+  border-radius: 15px;
+  max-width: 100%;
+  max-height: 100%;
+}
+#boton1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+#boton2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+#oportunidades {
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+.ofertas {
+  max-width: 250px;
+}
+.ofertas > img {
+  width: 200px;
+  border-radius: 15px;
+}
+.ofertas > p {
+  padding: 5px;
+}
+
+#servicios {
+  gap: 50px;
+  width: 100%;
+  padding-bottom: 5rem;
+  flex-wrap: wrap;
+}
+.services {
+  gap: 50px;
+}
+.services > img {
+  width: 100px;
+}
+
+.top {
+  width: 100%;
+  padding: var(--pc-padding-m);
+  background-color: var(--pc-background-000);
+  align-items: stretch;
+}
+.top > div:first-child {
+  padding-bottom: 20px;
+}
+.top > div > button {
+  margin-top: var(--pc-margin-m);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--pc-color-button);
+}
+.top > div > button > a {
+  color: var(--pc-color-000);
+}
+.top > div > button:hover {
+  background-color: var(--pc-color-button-hover);
+}
+.catalogo {
+  gap: 20px;
+}
+.pcs {
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+  gap: 1rem;
+}
+.pcs > ul {
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.asus {
+  width: 200px;
+  border-radius: 15px;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 220px;
+}
+.card > a > span {
+  color: var(--pc-color-200);
+}
+.envio {
+  color: var(--pc-color-300);
+}
+.card > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#top2 {
+  width: 100%;
+}
+#top2 > div {
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*! FOOTER */
+
+footer {
+  background-color: var(--pc-color-000);
+  width: 100%;
+  padding-top: 20px;
+  justify-content: space-evenly;
+  align-items: start;
+}
+nav {
+  padding: 10px;
+}
+h5 {
+  font-size: larger;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+li {
+  margin-bottom: 10px;
+}
+footer > p {
+  width: 100%;
+  border-top: 1px solid var(--pc-background-100);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+@media (max-width: 390px) {
+  .search,
+  .gone,
+  #bottomheader > ul {
+    display: none;
+  }
+  #pc > img {
+    width: 100px;
+  }
+  .top {
+    display: block;
+  }
+  .catalogo {
+    flex-direction: column;
+  }
+  .pcs > ul {
+    display: none;
+  }
+  footer > nav {
+    display: none;
+  }
+  footer > p {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .search {
+    display: none;
+  }
+}
